@@ -50,7 +50,7 @@ var practice_duration = 30000; // duration of practice
 var main_duration = 90000; // duration of main task
 
 //general variables for use throughout the experiment
-var online; // Numeric: 0 indicating that task is being run locally, 1 indicating that the task is being run through a platform
+var online = 1; // Numeric: 0 indicating that task is being run locally, 1 indicating that the task is being run through a platform
 var subject; // Subject ID
 var total_stroop = 0; // track total Stroop score
 var total_flanker = 0; // track total Flanker score
