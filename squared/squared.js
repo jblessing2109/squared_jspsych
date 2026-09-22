@@ -116,18 +116,18 @@ var get_participant_id = {
 
 // get_location: Introduces option to run program (and save files) locally or to run it online and collect data through a platform
 // Comment out get_location object if implementing a default of running the task online
-var get_location = {
-	type: jsPsychSurveyMultiChoice,
-	questions: [{
-			prompt: "Where are you running the task?",
-			name: "client",
-			options: ["Online (cognition.run, gorilla.sc, MTurk link)", "Local (Lab computer files)"],
-			required: true
-		}],
-	on_finish: function(data) {
-		online = data.response.client == "Online (cognition.run, gorilla.sc, MTurk link)" ? 1 : 0;
-	}
-}
+//var get_location = {
+//	type: jsPsychSurveyMultiChoice,
+//	questions: [{
+//			prompt: "Where are you running the task?",
+//			name: "client",
+//			options: ["Online (cognition.run, gorilla.sc, MTurk link)", "Local (Lab computer files)"],
+//			required: true
+//		}],
+//	on_finish: function(data) {
+//		online = 1;
+//	}
+//}
 
 var welcome = {
 	type: jsPsychHtmlButtonResponse,
