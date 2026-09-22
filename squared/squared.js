@@ -1152,4 +1152,4 @@ var preload = {
 	images: [al, ar, ml_fr, mr_fl, rarr, larr]
 }
 
-timeline.push(preload, get_participant_id, get_location, welcome, enter_fullscreen, flanker_task, conclusion, exit_fullscreen);
+timeline.push(preload, get_participant_id, welcome, enter_fullscreen, flanker_task, conclusion, exit_fullscreen);
