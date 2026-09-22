@@ -1153,3 +1153,4 @@ var preload = {
 }
 
 timeline.push(preload, get_participant_id, welcome, enter_fullscreen, flanker_task, conclusion, exit_fullscreen);
+jsPsych.run(timeline);
