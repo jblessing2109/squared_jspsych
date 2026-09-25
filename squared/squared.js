@@ -48,26 +48,16 @@ var jsPsych = initJsPsych({
                 filename: () => `flanker_test_${jsPsych.randomization.randomID(10)}.csv`
             }
         }
-    ],
-	on_finish: function() {
-        alert("jsPsych REALLY finished!");
-	}	
+    ]
 });
-setTimeout(function() {
-    if (window.opener) {
-        window.opener.postMessage(
-            {type: "flankerComplete", score: 99},
-            "*"
-        );
-    }
-}, 3000);
+
 // Set the seed for reproducible experiment runs. Use a different seed for a different fixed randomized order.
 // If trials should be kept constant across runs, uncomment next line.
 // jsPsych.randomization.setSeed('squaredtasks');
 
 // IMPORTANT: THESE ARE THE ONLY VARIABLES THAT SHOULD BE MANUALLY CHANGED (if at all), the rest should be adaptive
-var practice_duration = 3000; // duration of practice
-var main_duration = 5000; // duration of main task
+var practice_duration = 30000; // duration of practice
+var main_duration = 90000; // duration of main task
 
 //general variables for use throughout the experiment
 var online = 1; // Numeric: 0 indicating that task is being run locally, 1 indicating that the task is being run through a platform
