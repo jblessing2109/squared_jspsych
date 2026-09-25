@@ -48,7 +48,9 @@ var jsPsych = initJsPsych({
                 filename: () => `flanker_test_${jsPsych.randomization.randomID(10)}.csv`
             }
         }
-    ]
+    ],
+	on_finish: function() {
+        alert("jsPsych REALLY finished!");
 });
 setTimeout(function() {
     if (window.opener) {
