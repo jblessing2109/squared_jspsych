@@ -51,6 +51,7 @@ var jsPsych = initJsPsych({
     ],
 	on_finish: function() {
         alert("jsPsych REALLY finished!");
+	}	
 });
 setTimeout(function() {
     if (window.opener) {
