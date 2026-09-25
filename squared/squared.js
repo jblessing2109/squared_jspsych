@@ -1152,14 +1152,7 @@ var conclusion = {
     type: jsPsychHtmlKeyboardResponse,
 	trial_duration: 2000,
 	on_start: function() {
-		alert("Sending score to Qualtrics: " + total_flanker);
 		
-        if (window.opener) {
-            window.opener.postMessage(
-                {type: "flankerComplete", score: total_flanker},
-                "*"
-            );
-        }
     },
 
    stimulus: function() { return '<p style="font-size:25px;">You earned ' + total_flanker + ' points on the Multiple Arrows Task.</p>' +
