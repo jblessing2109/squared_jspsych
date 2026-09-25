@@ -39,7 +39,17 @@ To Use:
 ///////////////////////////////////////////
 
 // new to v7: Initialize jsPsych, this initialization should happen before the rest of the jsPsych code is called
-var jsPsych = initJsPsych({});
+var jsPsych = initJsPsych({
+    extensions: [
+        {
+            type: jsPsychExtensionPipe,
+            params: {
+                experiment_id: "tHWgg8JornJ8",
+                filename: () => `flanker_test_${jsPsych.randomization.randomID(10)}.csv`
+            }
+        }
+    ]
+});
 setTimeout(function() {
     if (window.opener) {
         window.opener.postMessage(
