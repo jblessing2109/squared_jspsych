@@ -40,9 +40,6 @@ To Use:
 
 // new to v7: Initialize jsPsych, this initialization should happen before the rest of the jsPsych code is called
 var jsPsych = initJsPsych({});
-if (window.opener) {
-    window.opener.postMessage({type: "flankerTest", score: 42}, "https://utampa.az1.qualtrics.com");
-}
 // Set the seed for reproducible experiment runs. Use a different seed for a different fixed randomized order.
 // If trials should be kept constant across runs, uncomment next line.
 // jsPsych.randomization.setSeed('squaredtasks');
