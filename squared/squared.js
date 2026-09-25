@@ -1129,6 +1129,15 @@ var simon_task = {timeline: [intro_simon, threetwoone, block_simon_practice, pre
 // Ending screen
 var conclusion = {
     type: jsPsychHtmlKeyboardResponse,
+	on_start: function() {
+        if (window.opener) {
+            window.opener.postMessage(
+                {type: "flankerComplete", score: total_flanker},
+                "https://utampa.az1.qualtrics.com"
+            );
+        }
+    },
+
    stimulus: function() { return '<p style="font-size:25px;">You earned ' + total_flanker + ' points on the Multiple Arrows Task.</p>' +
     '<p style="font-size:25px;">You are now finished with this task.</p>' +
     '<p style="font-size:25px;"><b>Press any key to exit.</b></p>' }
