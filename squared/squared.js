@@ -45,11 +45,14 @@ var jsPsych = initJsPsych({
             type: jsPsychExtensionPipe,
             params: {
                 experiment_id: "tHWgg8JornJ8",
-                filename: () => `flanker_test_${jsPsych.randomization.randomID(10)}.csv`
+                filename: () => `flanker_${flankerID}.csv`
             }
         }
     ]
 });
+
+var flankerID = new URLSearchParams(window.location.search).get('FlankerID');
+jsPsych.data.addProperties({FlankerID: flankerID});
 
 // Set the seed for reproducible experiment runs. Use a different seed for a different fixed randomized order.
 // If trials should be kept constant across runs, uncomment next line.
