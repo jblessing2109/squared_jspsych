@@ -1130,6 +1130,8 @@ var simon_task = {timeline: [intro_simon, threetwoone, block_simon_practice, pre
 var conclusion = {
     type: jsPsychHtmlKeyboardResponse,
 	on_start: function() {
+		alert("Sending score to Qualtrics: " + total_flanker);
+		
         if (window.opener) {
             window.opener.postMessage(
                 {type: "flankerComplete", score: total_flanker},
