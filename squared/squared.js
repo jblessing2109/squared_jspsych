@@ -1150,6 +1150,7 @@ var simon_task = {timeline: [intro_simon, threetwoone, block_simon_practice, pre
 // Ending screen
 var conclusion = {
     type: jsPsychHtmlKeyboardResponse,
+	trial_duration: 2000,
 	on_start: function() {
 		alert("Sending score to Qualtrics: " + total_flanker);
 		
@@ -1162,8 +1163,7 @@ var conclusion = {
     },
 
    stimulus: function() { return '<p style="font-size:25px;">You earned ' + total_flanker + ' points on the Multiple Arrows Task.</p>' +
-    '<p style="font-size:25px;">You are now finished with this task.</p>' +
-    '<p style="font-size:25px;"><b>Press any key to exit.</b></p>' }
+    '<p style="font-size:25px;">You are now finished with this task.</p>'}
 }
 
 var exit_fullscreen = {
@@ -1180,5 +1180,5 @@ var preload = {
 	images: [al, ar, ml_fr, mr_fl, rarr, larr]
 }
 
-timeline.push(get_participant_id, welcome, enter_fullscreen, flanker_task, conclusion, exit_fullscreen);
+timeline.push(get_participant_id, welcome, enter_fullscreen, flanker_task, conclusion);
 jsPsych.run(timeline); 
