@@ -1135,7 +1135,7 @@ var conclusion = {
         if (window.opener) {
             window.opener.postMessage(
                 {type: "flankerComplete", score: total_flanker},
-                "https://utampa.az1.qualtrics.com"
+                "*"
             );
         }
     },
