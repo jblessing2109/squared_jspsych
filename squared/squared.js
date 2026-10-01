@@ -770,8 +770,8 @@ block_flanker_main = createFlankerBlock(main_flanker);
 // 3g
 var conclusion_flanker = {
 	type: jsPsychHtmlButtonResponse,
-	stimulus: function() {return `<p>You earned a total of ` + total_flanker + ` points for that task. Great job!</p><p>Click on NEXT TASK to move on.</p>`; },
-	choices: ["NEXT TASK"],
+	stimulus: function() {return `<p>You earned a total of ` + total_flanker + ` points for that task. Great job!</p><p>Click FINISH to continue.</p>`; },
+	choices: ["FINISH"],
 	button_html: `<div style='height: 70px;'></div><button class="defaultButton">%choice%</button>`,
 	on_start: function() {
 		// Calculate the following metrics separately for practice trials and main trials, filtering out the trial where the block timed out:
