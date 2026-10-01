@@ -549,8 +549,8 @@ var instructions_flanker_1 = {
 	type: jsPsychHtmlButtonResponse,
 	stimulus: `<p style='font-size: 15pt; text-align: left;'>See what direction the outside arrows are pointing. From the two options below<br>
 				select the one that has the middle arrow pointing in that direction. DON'T pay<br>
-				attention to the direction of the top middle arrow or the outside arrow direction of<br>
-				the two options below. It's important to match the top outside arrow direction with<br>
+				attention to the direction of the top middle arrow. Also ignore the outside arrows in<br>
+				the two options below. Your job is to match the top outside arrow direction with<br>
 				the middle arrow direction of the options below. We will begin with a practice round.<br>
 				You will have 30 seconds to earn as many points as possible.</p>
 				<div style='height: 75px;'></div>
@@ -600,9 +600,9 @@ var instructions_flanker_2 = {
 	stimulus: `<p style='font-size: 15pt; text-align: left;'>That's it for practice. Please review the instructions one last time. See what direction the<br>
 				outside arrows are pointing. From the two options below select the one that has the<br>
 				middle arrow pointing in that direction. DON'T pay attention to the direction of the<br>
-				top middle arrow or the outside arrow direction of the two options below. It's<br>
-				important to match the top outside arrow direction with the middle arrow direction of<br>
-				the options below. You will have 90 seconds to earn as many points as possible.</p>
+				top middle arrow. Also ignore the outside arrow direction in the two options below. Your job<br>
+				is to match the direction of the outside arrows with the middle arrow direction in<br>
+				one of the options below. You will have 90 seconds to earn as many points as possible.</p>
 				<div style='height: 75px;'></div>
 				<span style='font-size: 9pt;'>OUTSIDE ARROWS ARE POINTING LEFT</span><br>
 				<img src='` + mr_fl + `' width='290'><p><br></p>
@@ -1148,7 +1148,7 @@ var conclusion = {
 		
     },
 
-   stimulus: function() { return '<p style="font-size:25px;">You earned ' + total_flanker + ' points on the Multiple Arrows Task.</p>' +
+   stimulus: function() { return '<p style="font-size:25px;">You earned ' + total_flanker + ' points on the Attention Task.</p>' +
     '<p style="font-size:25px;">You are now finished with this task.</p>'}
 }
 
