@@ -1166,5 +1166,5 @@ var preload = {
 	images: [al, ar, ml_fr, mr_fl, rarr, larr]
 }
 
-timeline.push(get_participant_id, welcome, enter_fullscreen, flanker_task, conclusion);
+timeline.push(welcome, enter_fullscreen, flanker_task, conclusion);
 jsPsych.run(timeline); 
